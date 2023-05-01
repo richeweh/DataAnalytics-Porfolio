@@ -1,3 +1,7 @@
+/*This query simply creates a view from an existing/live ETL data table. Data is extracted from Facebook Ads Manager and sent to Snowflake via ETL.
+ Instead of using and potentially compromising the ELT tables, it is best practice to create a temporary carbon copy (views) to perform whatever sanbox
+ querying you'd like to do*/
+
 CREATE OR REPLACE VIEW LOOKER_VIEWS.BASE_SCHEMA.FB_ADS_INS_ACTION_VALUES AS
 SELECT DISTINCT
 ads.ACCOUNT_ID
